@@ -1,8 +1,8 @@
 import random
 from typing import Dict, List, Union
 
-from VIPMUSIC import userbot
-from VIPMUSIC.core.mongo import mongodb
+from AviaxMusic import userbot
+from AviaxMusic.core.mongo import mongodb
 
 authdb = mongodb.adminauth
 authuserdb = mongodb.authuser
