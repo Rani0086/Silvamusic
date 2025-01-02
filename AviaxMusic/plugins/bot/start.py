@@ -24,6 +24,10 @@ from AviaxMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
+NEXI_VID = [
+"https://telegra.ph/file/1a3c152717eb9d2e94dc2.mp4",
+    
+]
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
@@ -87,6 +91,25 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
+        baby = await message.reply_text(f"**▒▒▒▒▒▒▒▒▒▒ 0%**")
+        await baby.edit_text(f"**█▒▒▒▒▒▒▒▒▒ 10%**")
+        await baby.edit_text(f"**██▒▒▒▒▒▒▒▒ 20%**")
+        await baby.edit_text(f"**███▒▒▒▒▒▒▒ 30%**")
+        await baby.edit_text(f"**████▒▒▒▒▒▒ 40%**")
+        await baby.edit_text(f"**█████▒▒▒▒▒ 50%**")
+        await baby.edit_text(f"**██████▒▒▒▒ 60%**")
+        await baby.edit_text(f"**███████▒▒▒ 70%**")
+        await baby.edit_text(f"**████████▒▒ 80%**")
+        await baby.edit_text(f"**█████████▒ 90%**")
+        await baby.edit_text(f"**██████████ 100%**")
+        await baby.edit_text(f"**❖ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ..**")
+        await baby.delete()
+        
+        await message.reply_video(
+            random.choice(NEXI_VID),
+            caption=_["start_2"].format(message.from_user.mention, app.mention),
+            reply_markup=InlineKeyboardMarkup(out),
+        )
         UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_photo(
             photo=config.START_IMG_URL,
