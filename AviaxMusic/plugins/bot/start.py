@@ -131,7 +131,6 @@ async def start_pm(client, message: Message, _):
     await lol.edit_text("🍀ꜱᴛᴀʀᴛɪɴɢ...")
     await lol.delete()        
 
-        UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_photo(
             photo=config.START_IMG_URL,
             caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM),
