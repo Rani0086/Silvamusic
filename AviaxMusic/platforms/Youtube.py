@@ -11,8 +11,8 @@ from youtubesearchpython.__future__ import VideosSearch
 from yt_dlp import YoutubeDL
 
 import config
-from VIPMUSIC.utils.database import is_on_off
-from VIPMUSIC.utils.formatters import time_to_seconds
+from AviaxMusic.utils.database import is_on_off
+from AviaxMusic.utils.formatters import time_to_seconds
 
 
 def cookies():
@@ -370,9 +370,12 @@ class YouTubeAPI:
                 "prefer_ffmpeg": True,
                 "postprocessors": [
                     {
-                        "key": "FFmpegExtractAudio",
-                        "preferredcodec": "mp3",
-                        "preferredquality": "192",
+                        'key': 'FFmpegExtractAudio',
+                        'preferredcodec': 'mp3',  
+                        "preferredquality": "30000",
+                        'audio_bitrate': '15000k',    
+                        'audio_channels': 2,
+                        'audio_sample_rate': '44100'
                     }
                 ],
             }
