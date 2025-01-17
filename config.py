@@ -19,7 +19,7 @@ MONGO_DB_URI = "mongodb+srv://I-LOVE-PDF-BOT:I-LOVE-PDF-BOT@cluster0.c51o3a9.mon
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60000))
 
 # Chat id of a group for logging bot's activities
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002009280180"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002468653401"))
 
 # Get this value from @MissRose_Bot on Telegram by /id
 OWNER_ID = 5458968679
